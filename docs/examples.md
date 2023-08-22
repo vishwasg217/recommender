@@ -472,7 +472,7 @@ Eventify Co.
 
 ---
 
-## Example: Email Marketing Sequence for E-Commerce Sale Event
+## Example 4: Email Marketing Sequence for E-Commerce Sale Event
 
 Promote a limited-time sale event on your e-commerce platform to boost sales and engage customers.
 
@@ -632,7 +632,7 @@ The Trendy Junction Team
 
 ---
 
-## Example: Email Marketing Sequence for Abandoned Cart Recovery
+## Example 5: Email Marketing Sequence for Abandoned Cart Recovery
 
 Recover potential lost sales by sending a series of emails targeting customers who abandoned their shopping carts.
 
@@ -795,7 +795,7 @@ The Tech Haven Team
 
 ---
 
-## Example: Email Marketing Sequence for Re-engagement
+## Example 6: Email Marketing Sequence for Re-engagement
 
 Revive inactive or dormant subscribers with a targeted email sequence that rekindles their interest and encourages re-engagement.
 
