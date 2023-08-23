@@ -69,3 +69,25 @@ test_input = {
         "solutions_presented": ["Inspiring success stories", "Personalized wellness plan"]
     }
 }
+
+def format_json_to_multiline_string(data):
+    result = []
+    
+    def recursive_format(data, indent_level=0):
+        if isinstance(data, dict):
+            for key, value in data.items():
+                result.append("    " * indent_level + f"{key}:")
+                recursive_format(value, indent_level + 1)
+        elif isinstance(data, list):
+            for item in data:
+                result.append("    " * indent_level + f"- {item}")
+        else:
+            result.append("    " * indent_level + f"{data}")
+    
+    recursive_format(data)
+    return "\n".join(result)
+
+# Assuming 'json_data' contains the received JSON object
+formatted_string = format_json_to_multiline_string(test_input)
+print(formatted_string)
+

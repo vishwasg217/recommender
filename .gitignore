@@ -1,2 +1,5 @@
 .env
 venv
+src/__pycache__
+backend/__pycache__
+prompts/__pycache__
