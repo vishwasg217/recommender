@@ -5,7 +5,7 @@ from inputs import EmailMarketingInputs
 
 app = FastAPI()
 
-# @app.post("/email-marketing")
+@app.post("/email-marketing")
 def generate(inputs: EmailMarketingInputs):
     print(inputs)
 

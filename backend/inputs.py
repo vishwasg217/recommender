@@ -26,8 +26,8 @@ class StorylineProgression(BaseModel):
     email_sequence_narrative: str
 
 class PainPointsSolutions(BaseModel):
-    pain_points_addressed: List[str]
-    solutions_presented: List[str]
+    pain_points_addressed: Optional[str] = None
+    solutions_presented: Optional[str] = None
 
 class EmailMarketingInputs(BaseModel):
     business_information: BusinessInformation
