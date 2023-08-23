@@ -1,0 +1,16 @@
+- **Generated Email Sequence:**
+
+   **Email 1: Introduction and Pain Point**
+   - [String] content for the first email introducing the campaign and addressing a specific customer pain point.
+
+   **Email 2: Building on Pain Point**
+   - [String] content for the second email that elaborates on the pain point and presents a solution.
+
+   **Email 3: Solution Presentation**
+   - [String] content for the third email introducing the product/service as a solution and its key benefits.
+
+   **Email 4: Benefits and Social Proof**
+   - [String]  content for the fourth email highlighting the benefits of the product/service and showcasing customer testimonials.
+
+   **Email 5: Call to Action and Conclusion**
+   - [String] the content for the final email with a strong call to action and a conclusion that summarizes the campaign.
