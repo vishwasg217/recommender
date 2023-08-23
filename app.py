@@ -120,6 +120,9 @@ email_inputs = {
 with col2:
     st.write("## Output")
 
+if "output" not in st.session_state:
+    st.session_state.output = None
+
 if st.button("Generate Emails"):
     st.write(email_inputs)
     with col2:
@@ -127,9 +130,13 @@ if st.button("Generate Emails"):
             response = requests.post(model_url, json=email_inputs)
             if response.ok:
                 emails = response.json()
-                if st.button("Copy Emails"):
-                    pyperclip.copy(emails)
-                st.markdown(emails)
+                st.session_state.output = emails
             else:
-            
-                st.write("Error generating emails", response.status_code, response.text)
+                with col2:
+                    st.write("Error generating emails", response.status_code, response.text)
+
+with col2:
+    if st.session_state.output:
+        if st.button("Copy Emails"):
+                pyperclip.copy(st.session_state.output)
+        st.markdown(st.session_state.output)

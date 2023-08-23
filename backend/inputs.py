@@ -39,38 +39,39 @@ class EmailMarketingInputs(BaseModel):
     pain_points_and_solutions: PainPointsSolutions
 
 
-test_input = {
+default_input = {
     "business_information": {
-        "business_name": "FitLife Wellness",
-        "business_type": "Health and Fitness",
-        "campaign_goal": "Re-engage Inactive Subscribers",
-        "audience_demographics": "Health-conscious individuals, age 25-50, interested in fitness"
+        "business_name": "Trendy Junction",
+        "business_type": "Fashion and Accessories",
+        "campaign_goal": "Drive Sales during Summer Clearance Sale",
+        "audience_demographics": "Fashion enthusiasts, age 18-35, worldwide"
     },
     "content_guidelines": {
-        "content_type": "Re-engagement",
-        "key_message": "Your Health Journey Continues with FitLife Wellness"
+        "content_type": "Sale Promotion",
+        "key_message": "Shop the Hottest Summer Styles at Unbeatable Prices"
     },
     "email_structure": {
-        "call_to_action": "Get Back on Track"
+        "call_to_action": "Shop Now"
     },
     "product_service_information": {
-        "product_service_details": None,
-        "features_and_benefits": None
+        "product_service_details": "Summer clothing and accessories collection",
+        "features_and_benefits": "Wide variety, discounted prices, free shipping for orders over $50"
     },
     "tone_and_voice": {
-        "communication_tone": "Supportive and Encouraging",
-        "brand_voice": "Inspirational and Motivating"
+        "communication_tone": "Exciting and Trendy",
+        "brand_voice": "Chic and Modern"
     },
     "storyline_progression": {
-        "email_sequence_narrative": "Remind subscribers of the benefits of a healthy lifestyle, showcase success stories, and offer personalized incentives to reignite their commitment."
+        "email_sequence_narrative": "Create anticipation for the Summer Clearance Sale, showcasing the latest fashion trends and emphasizing the limited-time nature of the event."
     },
     "pain_points_and_solutions": {
-        "pain_points_addressed": "Lack of motivation, Busy schedule",
-        "solutions_presented": "Inspiring success stories,Personalized wellness plan"
+        "pain_points_addressed": "Limited-time offers, expensive summer fashion, missing out on latest trends",
+        "solutions_presented": "Highlight exclusive discounts, emphasize unbeatable prices, showcase new arrivals"
     }
 }
 
 def format_json_to_multiline_string(data):
+    print("data", data)
     result = []
     
     def recursive_format(data, indent_level=0):
