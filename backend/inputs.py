@@ -65,8 +65,8 @@ test_input = {
         "email_sequence_narrative": "Remind subscribers of the benefits of a healthy lifestyle, showcase success stories, and offer personalized incentives to reignite their commitment."
     },
     "pain_points_and_solutions": {
-        "pain_points_addressed": ["Lack of motivation", "Busy schedule"],
-        "solutions_presented": ["Inspiring success stories", "Personalized wellness plan"]
+        "pain_points_addressed": "Lack of motivation, Busy schedule",
+        "solutions_presented": "Inspiring success stories,Personalized wellness plan"
     }
 }
 
@@ -88,6 +88,6 @@ def format_json_to_multiline_string(data):
     return "\n".join(result)
 
 # Assuming 'json_data' contains the received JSON object
-formatted_string = format_json_to_multiline_string(test_input)
-print(formatted_string)
+# formatted_string = format_json_to_multiline_string(test_input)
+# print(formatted_string)
 
