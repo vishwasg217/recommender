@@ -29,10 +29,10 @@ config = dotenv_values(".env")
 
 OPENAI_API_KEY = config["OPENAI_API_KEY"]
 
-def generate_emails(inputs: str):
-
-    tone_and_voice = get_brand_tone_and_voice(inputs["tone_and_voice"]["tone_and_voice_from_website"])
-    inputs["tone_and_voice"]["tone_and_voice_from_website"] = tone_and_voice   
+def generate_emails(inputs):
+    print(type(inputs))
+    tone_and_voice = get_brand_tone_and_voice(inputs.tone_and_voice.tone_and_voice_from_website)
+    inputs.tone_and_voice.tone_and_voice_from_website = tone_and_voice   
 
     string_inputs = format_json_to_multiline_string(inputs)
 

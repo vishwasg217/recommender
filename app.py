@@ -16,7 +16,7 @@ st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 with open("test/test_inputs.json", "r") as f:
     default_input = json.load(f)
 
-default_input = default_input["2"]
+default_input = default_input["apple"]
 
 # Streamlit App
 st.title("Email Marketing Campaign Generator")
@@ -48,7 +48,7 @@ with col1:
 
     # Tone and Voice
     st.header("Tone and Voice")
-    website_url = st.text_input("Website URL", value=default_input["tone_and_voice"]["website_url"])
+    website_url = st.text_input("Website URL", value=default_input["tone_and_voice"]["tone_and_voice_from_website"])
     communication_tone = st.text_input("Communication Tone", value=default_input["tone_and_voice"]["communication_tone"])
     brand_voice = st.text_input("Brand Voice", value=default_input["tone_and_voice"]["brand_voice"])
 
@@ -81,7 +81,7 @@ email_inputs = {
             "features_and_benefits": features_and_benefits
         },
         "tone_and_voice": {
-            "website_url": website_url,
+            "tone_and_voice_from_website": website_url,
             "communication_tone": communication_tone,
             "brand_voice": brand_voice
         },

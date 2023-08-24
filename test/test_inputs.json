@@ -1,122 +1,126 @@
 {
-    "1": {
+    "starbucks": {
         "business_information": {
-            "business_name": "Trendy Junction",
-            "business_type": "Fashion and Accessories",
-            "campaign_goal": "Drive Sales during Summer Clearance Sale",
-            "audience_demographics": "Fashion enthusiasts, age 18-35, worldwide"
+            "business_name": "Starbucks",
+            "business_type": "Coffee and Beverage",
+            "campaign_goal": "Introduce New Seasonal Drinks",
+            "audience_demographics": "Coffee lovers, age 18-45, worldwide"
+        },
+        "content_guidelines": {
+            "content_type": "Product Promotion",
+            "key_message": "Discover the Flavors of the Season: Try Our New Fall Drinks"
+        },
+        "email_structure": {
+            "call_to_action": "Taste Now"
+        },
+        "product_service_information": {
+            "product_service_details": "Limited-time seasonal drinks and treats",
+            "features_and_benefits": "Unique flavors, cozy beverages, handcrafted quality"
+        },
+        "tone_and_voice": {
+            "tone_and_voice_from_website": "https://www.starbucks.com",
+            "communication_tone": "Inviting and Warm",
+            "brand_voice": "Casual and Approachable"
+        },
+        "storyline_progression": {
+            "email_sequence_narrative": "Indulge in the comfort of fall with our latest seasonal offerings, carefully crafted to bring warmth and delight."
+        },
+        "pain_points_and_solutions": {
+            "pain_points_addressed": "Craving seasonal flavors, missing out on limited-time drinks",
+            "solutions_presented": "Highlight unique flavors, emphasize limited availability"
+        }
+    },
+    "prime video":{
+        "business_information": {
+            "business_name": "Amazon Prime Video",
+            "business_type": "Streaming Entertainment",
+            "campaign_goal": "Promote New Original Series Release",
+            "audience_demographics": "Entertainment enthusiasts, age 18-40, interested in streaming content"
+        },
+        "content_guidelines": {
+            "content_type": "Content Promotion",
+            "key_message": "Dive into a New World: Watch Our Latest Original Series"
+        },
+        "email_structure": {
+            "call_to_action": "Watch Now"
+        },
+        "product_service_information": {
+            "product_service_details": "Fresh original series with compelling storylines",
+            "features_and_benefits": "Engaging plots, high-quality production, binge-worthy"
+        },
+        "tone_and_voice": {
+            "tone_and_voice_from_website": "https://www.primevideo.com",
+            "communication_tone": "Captivating and Energetic",
+            "brand_voice": "Innovative and Cutting-Edge"
+        },
+        "storyline_progression": {
+            "email_sequence_narrative": "Embark on a journey with our latest original series, filled with suspense, drama, and unforgettable moments."
+        },
+        "pain_points_and_solutions": {
+            "pain_points_addressed": "Seeking fresh entertainment, missing out on trending shows",
+            "solutions_presented": "Highlight intriguing plots, emphasize binge-worthiness"
+        }
+    },
+    "nike": {
+        "business_information": {
+            "business_name": "Nike",
+            "business_type": "Athletic Apparel and Footwear",
+            "campaign_goal": "Boost Sales for Sports Gear",
+            "audience_demographics": "Athletes and fitness enthusiasts, age 16-35, worldwide"
         },
         "content_guidelines": {
             "content_type": "Sale Promotion",
-            "key_message": "Shop the Hottest Summer Styles at Unbeatable Prices"
+            "key_message": "Elevate Your Performance: Shop Our Athletic Gear Sale"
         },
         "email_structure": {
             "call_to_action": "Shop Now"
         },
         "product_service_information": {
-            "product_service_details": "Summer clothing and accessories collection",
-            "features_and_benefits": "Wide variety, discounted prices, free shipping for orders over $50"
+            "product_service_details": "Wide range of sports apparel, footwear, and accessories",
+            "features_and_benefits": "Innovative designs, performance-enhancing, renowned quality"
         },
         "tone_and_voice": {
-            "communication_tone": "Exciting and Trendy",
-            "brand_voice": "Chic and Modern"
+            "tone_and_voice_from_website": "https://www.nike.com/in",
+            "communication_tone": "Motivational and Dynamic",
+            "brand_voice": "Passionate and Driven"
         },
         "storyline_progression": {
-            "email_sequence_narrative": "Create anticipation for the Summer Clearance Sale, showcasing the latest fashion trends and emphasizing the limited-time nature of the event."
+            "email_sequence_narrative": "Step up your game with our high-performance athletic gear, designed to help you reach your fitness goals."
         },
         "pain_points_and_solutions": {
-            "pain_points_addressed": "Limited-time offers, expensive summer fashion, missing out on latest trends",
-            "solutions_presented": "Highlight exclusive discounts, emphasize unbeatable prices, showcase new arrivals"
+            "pain_points_addressed": "Looking for quality sportswear, seeking performance boost, missing out on deals",
+            "solutions_presented": "Highlight innovative designs, emphasize performance benefits, showcase sale discounts"
         }
     },
-    "2": {
+    "apple": {
         "business_information": {
-            "business_name": "Tech Haven Electronics",
-            "business_type": "Electronics Retailer",
-            "campaign_goal": "Promote the Launch of the Next-Gen Smartphone",
-            "audience_demographics": "Tech-savvy individuals, age 20-45, interested in gadgets and innovation"
+            "business_name": "Apple",
+            "business_type": "Technology and Electronics",
+            "campaign_goal": "Announce Upcoming Product Launch Event",
+            "audience_demographics": "Tech enthusiasts, age 18-45, interested in innovation"
         },
         "content_guidelines": {
-            "content_type": "Product Launch",
-            "key_message": "Experience the Future: Introducing Our Most Advanced Smartphone Yet"
+            "content_type": "Event Announcement",
+            "key_message": "Experience the Future: Join Us for Our Upcoming Product Launch Event"
         },
         "email_structure": {
-            "call_to_action": "Discover Now"
+            "call_to_action": "RSVP Now"
         },
         "product_service_information": {
-            "product_service_details": "Cutting-edge smartphone with AI integration and enhanced camera technology",
-            "features_and_benefits": "Revolutionary features, seamless AI assistance, professional-grade photography"
+            "product_service_details": "Unveiling new and groundbreaking technology products",
+            "features_and_benefits": "Cutting-edge innovation, enhanced performance, sleek design"
         },
         "tone_and_voice": {
-            "communication_tone": "Innovative and Exciting",
-            "brand_voice": "Futuristic and Informative"
+            "tone_and_voice_from_website": "https://www.apple.com",
+            "communication_tone": "Anticipatory and Exciting",
+            "brand_voice": "Inventive and Sophisticated"
         },
         "storyline_progression": {
-            "email_sequence_narrative": "Build anticipation for the new smartphone by highlighting its standout features, advanced capabilities, and how it will reshape daily life."
+            "email_sequence_narrative": "Be part of a momentous event where technology and design converge to shape the future of innovation."
         },
         "pain_points_and_solutions": {
-            "pain_points_addressed": "Outdated technology, lack of advanced features, missing out on tech trends",
-            "solutions_presented": "Showcase revolutionary features, emphasize AI integration, highlight benefits over current devices"
+            "pain_points_addressed": "Curiosity about new tech, desire for innovation, missing out on tech advancements",
+            "solutions_presented": "Tease cutting-edge products, emphasize event exclusivity, showcase Apple's track record"
         }
-    },
-    "3": {
-        "business_information": {
-            "business_name": "GreenScape Gardening Services",
-            "business_type": "Landscaping and Gardening",
-            "campaign_goal": "Promote Special Fall Landscaping Package",
-            "audience_demographics": "Homeowners, age 30-60, interested in garden maintenance and landscaping"
-        },
-        "content_guidelines": {
-            "content_type": "Service Promotion",
-            "key_message": "Transform Your Garden This Fall with Our Exclusive Landscaping Package"
-        },
-        "email_structure": {
-            "call_to_action": "Book Now"
-        },
-        "product_service_information": {
-            "product_service_details": "Comprehensive fall landscaping package including cleanup, planting, and design",
-            "features_and_benefits": "Expert garden transformation, seasonal plants, enhanced outdoor aesthetic"
-        },
-        "tone_and_voice": {
-            "communication_tone": "Inviting and Informative",
-            "brand_voice": "Friendly and Knowledgeable"
-        },
-        "storyline_progression": {
-            "email_sequence_narrative": "Highlight the beauty of fall gardens and how our landscaping package can help homeowners achieve a stunning and well-maintained outdoor space."
-        },
-        "pain_points_and_solutions": {
-            "pain_points_addressed": "Lack of time for gardening, uninspiring outdoor space, unfamiliarity with landscaping",
-            "solutions_presented": "Offer comprehensive landscaping, emphasize professional touch, showcase seasonal plant options"
-        }
-    },
-    "4": {
-        "business_information": {
-            "business_name": "FitZone Fitness Studio",
-            "business_type": "Fitness and Wellness",
-            "campaign_goal": "Inspire New Year's Resolutions with Fitness Memberships",
-            "audience_demographics": "Health-conscious individuals, age 18-50, looking to kickstart their fitness journey"
-        },
-        "content_guidelines": {
-            "content_type": "Membership Promotion",
-            "key_message": "Elevate Your Fitness Journey: Unleash Your Potential in the New Year"
-        },
-        "email_structure": {
-            "call_to_action": "Join Now"
-        },
-        "product_service_information": {
-            "product_service_details": "Variety of fitness classes, personalized training, nutrition guidance",
-            "features_and_benefits": "Diverse workout options, expert trainers, holistic approach to fitness"
-        },
-        "tone_and_voice": {
-            "communication_tone": "Motivational and Encouraging",
-            "brand_voice": "Supportive and Energetic"
-        },
-        "storyline_progression": {
-            "email_sequence_narrative": "Empower recipients to embrace their fitness goals for the New Year by highlighting the range of classes, expert trainers, and holistic support available at the studio."
-        },
-        "pain_points_and_solutions": {
-            "pain_points_addressed": "Struggling with fitness commitment, lack of motivation, unsure about workout routines",
-            "solutions_presented": "Offer diverse classes, emphasize supportive community, showcase success stories"
-        }
-    }
+    }   
 }

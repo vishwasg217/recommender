@@ -6,8 +6,6 @@ from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.output_parsers import CommaSeparatedListOutputParser
 
-
-
 def scrape_website_text(website_url):
         try:
             response = requests.get(website_url)
@@ -28,11 +26,10 @@ def scrape_website_text(website_url):
             print("An error occurred:", e)
             return ""
 
-def get_brand_tone_and_voice():
+def get_brand_tone_and_voice(website_url):
     config = dotenv_values(".env")
     OPENAI_API_KEY = config["OPENAI_API_KEY"]
 
-    website_url = "https://www.activeloop.ai/"
     website_text = scrape_website_text(website_url)
 
     template = """
