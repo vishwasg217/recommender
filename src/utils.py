@@ -1,4 +1,80 @@
-# Function to gather user inputs
+import requests
+from bs4 import BeautifulSoup
+from dotenv import dotenv_values
+
+from langchain.llms import OpenAI
+from langchain.prompts import PromptTemplate
+from langchain.output_parsers import CommaSeparatedListOutputParser
+
+
+
+def scrape_website_text(website_url):
+        try:
+            response = requests.get(website_url)
+            if response.status_code == 200:
+                # Parse the HTML content using BeautifulSoup
+                soup = BeautifulSoup(response.content, 'html.parser')
+                
+                # Extract text content from paragraphs and headers
+                text_content = ""
+                for paragraph in soup.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
+                    text_content += paragraph.get_text() + " "
+                
+                return text_content
+            else:
+                print("Failed to fetch website content")
+                return ""
+        except Exception as e:
+            print("An error occurred:", e)
+            return ""
+
+def get_brand_tone_and_voice():
+    config = dotenv_values(".env")
+    OPENAI_API_KEY = config["OPENAI_API_KEY"]
+
+    website_url = "https://www.activeloop.ai/"
+    website_text = scrape_website_text(website_url)
+
+    template = """
+    I am building an email marketing campaign generation system. 
+    Hence I have scraped data from the company's website:
+
+    {company_info}
+
+    You are tasked to produce a list of exactly 5 words that capture the company's brand tone and voice. 
+
+    Please provide only a list of comma separated  emotions.
+    """
+
+    prompt = PromptTemplate(
+        template=template,
+        input_variables=["company_info"]
+    )
+
+    formatted_prompt = prompt.format(company_info=website_text)
+
+    llm = OpenAI(openai_api_key=OPENAI_API_KEY)
+    response = llm(formatted_prompt)
+
+    return response
+
+def format_json_to_multiline_string(data):
+    result = []
+    
+    def recursive_format(data, indent_level=0):
+        if isinstance(data, dict):
+            for key, value in data.items():
+                result.append("    " * indent_level + f"{key}:")
+                recursive_format(value, indent_level + 1)
+        elif isinstance(data, list):
+            for item in data:
+                result.append("    " * indent_level + f"- {item}")
+        else:
+            result.append("    " * indent_level + f"{data}")
+    
+    recursive_format(data)
+    return "\n".join(result)
+
 def gather_user_inputs():
     print("1. Business Information:")
     business_name = input("   - Business Name: ")
@@ -46,15 +122,4 @@ def gather_user_inputs():
     }
     return inputs
 
-# Gather user inputs
-user_inputs = gather_user_inputs()
 
-# Print gathered inputs
-print("\nGathered Inputs:")
-for section, values in user_inputs.items():
-    print(f"{section.replace('_', ' ')}:")
-    if isinstance(values, list):
-        print("\n".join(f"   - {value}" for value in values))
-    else:
-        print(f"   - {values}")
-    print("=" * 50)

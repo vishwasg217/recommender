@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import pyperclip
+import json
 
 app_url = "http://localhost:8000"
 endpoint = "/generate"
@@ -12,36 +13,10 @@ st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 
 
 # Default Example Input
-default_input = {
-    "business_information": {
-        "business_name": "Trendy Junction",
-        "business_type": "Fashion and Accessories",
-        "campaign_goal": "Drive Sales during Summer Clearance Sale",
-        "audience_demographics": "Fashion enthusiasts, age 18-35, worldwide"
-    },
-    "content_guidelines": {
-        "content_type": "Sale Promotion",
-        "key_message": "Shop the Hottest Summer Styles at Unbeatable Prices"
-    },
-    "email_structure": {
-        "call_to_action": "Shop Now"
-    },
-    "product_service_information": {
-        "product_service_details": "Summer clothing and accessories collection",
-        "features_and_benefits": "Wide variety, discounted prices, free shipping for orders over $50"
-    },
-    "tone_and_voice": {
-        "communication_tone": "Exciting and Trendy",
-        "brand_voice": "Chic and Modern"
-    },
-    "storyline_progression": {
-        "email_sequence_narrative": "Create anticipation for the Summer Clearance Sale, showcasing the latest fashion trends and emphasizing the limited-time nature of the event."
-    },
-    "pain_points_and_solutions": {
-        "pain_points_addressed": "Limited-time offers, expensive summer fashion, missing out on latest trends",
-        "solutions_presented": "Highlight exclusive discounts, emphasize unbeatable prices, showcase new arrivals"
-    }
-}
+with open("test/test_inputs.json", "r") as f:
+    default_input = json.load(f)
+
+default_input = default_input["2"]
 
 # Streamlit App
 st.title("Email Marketing Campaign Generator")
@@ -73,6 +48,7 @@ with col1:
 
     # Tone and Voice
     st.header("Tone and Voice")
+    website_url = st.text_input("Website URL", value=default_input["tone_and_voice"]["website_url"])
     communication_tone = st.text_input("Communication Tone", value=default_input["tone_and_voice"]["communication_tone"])
     brand_voice = st.text_input("Brand Voice", value=default_input["tone_and_voice"]["brand_voice"])
 
@@ -105,6 +81,7 @@ email_inputs = {
             "features_and_benefits": features_and_benefits
         },
         "tone_and_voice": {
+            "website_url": website_url,
             "communication_tone": communication_tone,
             "brand_voice": brand_voice
         },
@@ -139,4 +116,20 @@ with col2:
     if st.session_state.output:
         if st.button("Copy Emails"):
                 pyperclip.copy(st.session_state.output)
-        st.markdown(st.session_state.output)
+
+        headers = ["Email 1: Introduction and Pain Point",
+            "Email 2: Building on Pain Point",
+            "Email 3: Solution Presentation",
+            "Email 4: Benefits and Social Proof",
+            "Email 5: Call to Action and Conclusion"
+        ]
+
+        for index, (email_id, email_data) in enumerate(st.session_state.output.items()):
+            st.subheader(headers[index])
+            st.write("**Subject:**")
+            st.write(email_data["subject"])
+            st.write(email_data["greeting"])
+            st.write(email_data["body"])
+            st.write(email_data["signature"])
+            st.divider()
+        

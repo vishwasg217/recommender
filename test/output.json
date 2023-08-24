@@ -1,0 +1,34 @@
+[
+    {
+        "email_1": {
+            "subject": "Discover the Hottest Summer Styles at Trendy Junction!",
+            "greeting": "Hey Fashion Enthusiasts!",
+            "body": "Summer is here and Trendy Junction has the best selection of fashion and accessories to keep you looking your best! Our Summer Clearance Sale is offering unbeatable prices on the latest trends. Don't miss out on this limited-time opportunity to shop the hottest summer styles!",
+            "signature": "The Trendy Junction Team"
+        },
+        "email_2": {
+            "subject": "Limited-time Prices on Summer Trends at Trendy Junction!",
+            "greeting": "Hey Fashion Enthusiasts!",
+            "body": "Summer fashion can be expensive, but Trendy Junction is here to make sure you don't miss out on the latest trends. Our Summer Clearance Sale is offering limited-time prices on the hottest looks. Don't wait - shop now to get the best selection at unbeatable prices!",
+            "signature": "The Trendy Junction Team"
+        },
+        "email_3": {
+            "subject": "Shop Trendy Junction's Summer Collection and Get Exclusive Discounts!",
+            "greeting": "Hey Fashion Enthusiasts!",
+            "body": "Shop Trendy Junction's Summer Collection for the latest fashion trends at unbeatable prices. Our Summer Clearance Sale is offering exclusive discounts on our wide variety of clothing and accessories. Plus, get free shipping for orders over $50!",
+            "signature": "The Trendy Junction Team"
+        },
+        "email_4": {
+            "subject": "Look Your Best with Trendy Junction's Summer Collection!",
+            "greeting": "Hey Fashion Enthusiasts!",
+            "body": "Stay ahead of the trends with Trendy Junction's Summer Collection. Our Summer Clearance Sale offers unbeatable prices on the latest styles. Our customers are loving the selection and you will too. Don't miss out on this limited-time opportunity to look your best!",
+            "signature": "The Trendy Junction Team"
+        },
+        "email_5": {
+            "subject": "It's the Last Day of Trendy Junction's Summer Clearance Sale!",
+            "greeting": "Hey Fashion Enthusiasts!",
+            "body": "Today is the last day of Trendy Junction's Summer Clearance Sale, so take advantage of our unbeatable prices on the latest fashion trends while you still can! Shop now and get the best selection of clothing and accessories before it's too late. Don't miss out - shop now!",
+            "signature": "The Trendy Junction Team"
+        }
+    }
+]

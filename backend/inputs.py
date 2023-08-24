@@ -19,6 +19,7 @@ class ProductServiceInformation(BaseModel):
     features_and_benefits: Optional[str] = None
 
 class ToneAndVoice(BaseModel):
+    tone_and_voice_from_website: Optional[str] = None
     communication_tone: Optional[str] = None
     brand_voice: Optional[str] = None
 
@@ -38,55 +39,6 @@ class EmailMarketingInputs(BaseModel):
     storyline_progression: StorylineProgression
     pain_points_and_solutions: PainPointsSolutions
 
-
-default_input = {
-    "business_information": {
-        "business_name": "Trendy Junction",
-        "business_type": "Fashion and Accessories",
-        "campaign_goal": "Drive Sales during Summer Clearance Sale",
-        "audience_demographics": "Fashion enthusiasts, age 18-35, worldwide"
-    },
-    "content_guidelines": {
-        "content_type": "Sale Promotion",
-        "key_message": "Shop the Hottest Summer Styles at Unbeatable Prices"
-    },
-    "email_structure": {
-        "call_to_action": "Shop Now"
-    },
-    "product_service_information": {
-        "product_service_details": "Summer clothing and accessories collection",
-        "features_and_benefits": "Wide variety, discounted prices, free shipping for orders over $50"
-    },
-    "tone_and_voice": {
-        "communication_tone": "Exciting and Trendy",
-        "brand_voice": "Chic and Modern"
-    },
-    "storyline_progression": {
-        "email_sequence_narrative": "Create anticipation for the Summer Clearance Sale, showcasing the latest fashion trends and emphasizing the limited-time nature of the event."
-    },
-    "pain_points_and_solutions": {
-        "pain_points_addressed": "Limited-time offers, expensive summer fashion, missing out on latest trends",
-        "solutions_presented": "Highlight exclusive discounts, emphasize unbeatable prices, showcase new arrivals"
-    }
-}
-
-def format_json_to_multiline_string(data):
-    print("data", data)
-    result = []
-    
-    def recursive_format(data, indent_level=0):
-        if isinstance(data, dict):
-            for key, value in data.items():
-                result.append("    " * indent_level + f"{key}:")
-                recursive_format(value, indent_level + 1)
-        elif isinstance(data, list):
-            for item in data:
-                result.append("    " * indent_level + f"- {item}")
-        else:
-            result.append("    " * indent_level + f"{data}")
-    
-    recursive_format(data)
-    return "\n".join(result)
 
 # Assuming 'json_data' contains the received JSON object
 # formatted_string = format_json_to_multiline_string(test_input)

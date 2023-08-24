@@ -5,9 +5,10 @@ Below are the input parameters you need to consider:
 {inputs}
 ---
 
-Below is the email marketing campaign output format. Write the subject for each email as well:
+Generate the email sequence using the input parameters above and the output format given below. 
+Use placeholders wherever necessary.
+Each email should be more than 100 words long.
 ---
 {output_format}
 ---
 
-Generate the email sequence using the input parameters above and the output format given. Use placeholders wherever necessary.

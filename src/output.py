@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 
 class Email(BaseModel):
     subject: str = Field(description="The subject line of the email.")
-    greeting: str = Field(description="The greeting of the email.")
+    greeting: str = Field(description="The greeting of the email. Use placeholder")
     body: str = Field(description="The body of the email.")
     signature: str = Field(description="The signature of the email.")
 
