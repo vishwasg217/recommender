@@ -31,7 +31,7 @@ from src.utils import get_brand_tone_and_voice, format_json_to_multiline_string
 
 def generate_emails(inputs, OPENAI_API_KEY):
     try:
-        tone_and_voice = get_brand_tone_and_voice(inputs.tone_and_voice.tone_and_voice_from_website)
+        tone_and_voice = get_brand_tone_and_voice(inputs.tone_and_voice.tone_and_voice_from_website, OPENAI_API_KEY)
         inputs.tone_and_voice.tone_and_voice_from_website = tone_and_voice 
     except AttributeError:
         print("error")  

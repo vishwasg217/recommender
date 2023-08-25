@@ -26,9 +26,7 @@ def scrape_website_text(website_url):
             print("An error occurred:", e)
             return ""
 
-def get_brand_tone_and_voice(website_url):
-    config = dotenv_values(".env")
-    OPENAI_API_KEY = config["OPENAI_API_KEY"]
+def get_brand_tone_and_voice(website_url, OPENAI_API_KEY):
 
     website_text = scrape_website_text(website_url)
 
