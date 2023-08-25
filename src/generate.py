@@ -25,14 +25,16 @@ from prompts.prompt import get_prompt
 from src.output import Campaign
 from src.utils import get_brand_tone_and_voice, format_json_to_multiline_string
 
-config = dotenv_values(".env")
+# config = dotenv_values(".env")
 
-OPENAI_API_KEY = config["OPENAI_API_KEY"]
+# OPENAI_API_KEY = config["OPENAI_API_KEY"]
 
-def generate_emails(inputs):
-    print(type(inputs))
-    tone_and_voice = get_brand_tone_and_voice(inputs.tone_and_voice.tone_and_voice_from_website)
-    inputs.tone_and_voice.tone_and_voice_from_website = tone_and_voice   
+def generate_emails(inputs, OPENAI_API_KEY):
+    try:
+        tone_and_voice = get_brand_tone_and_voice(inputs.tone_and_voice.tone_and_voice_from_website)
+        inputs.tone_and_voice.tone_and_voice_from_website = tone_and_voice 
+    except AttributeError:
+        print("error")  
 
     string_inputs = format_json_to_multiline_string(inputs)
 
@@ -47,7 +49,7 @@ def generate_emails(inputs):
         partial_variables={"output_format": parser.get_format_instructions()}
     )
 
-    llm = OpenAI(openai_api_key=OPENAI_API_KEY, max_tokens=3000)
+    llm = OpenAI(openai_api_key=OPENAI_API_KEY, max_tokens=3000, presence_penalty=1)
     chat = ChatOpenAI(openai_api_key=OPENAI_API_KEY, max_tokens=3000)
 
     formatted_input = prompt.format(inputs=string_inputs)

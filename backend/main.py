@@ -6,10 +6,10 @@ sys.path.append(str(project_root))
 
 
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, Header
 import json
 
-from backend.inputs import EmailMarketingInputs
+from backend.inputs import Inputs
 from src.generate import generate_emails
 
 app = FastAPI()
@@ -19,8 +19,10 @@ def index():
     return {"message": "Hello, World"}
 
 @app.post("/generate")
-def generate(inputs: EmailMarketingInputs):
-    answer = generate_emails(inputs)
+def generate(inputs: Inputs):
+    email_inputs = inputs.email_inputs
+    OPENAI_API_KEY = inputs.api_key
+    answer = generate_emails(email_inputs, OPENAI_API_KEY)
     return answer
 
 

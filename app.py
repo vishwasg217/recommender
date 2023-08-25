@@ -1,6 +1,5 @@
 import streamlit as st
 import requests
-import pyperclip
 import json
 
 app_url = "http://localhost:8000"
@@ -8,23 +7,26 @@ endpoint = "/generate"
 model_url = f"{app_url}{endpoint}"
 
 import streamlit as st
+st.set_page_config(layout="wide")
 
-st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
-
-
-# Default Example Input
 with open("test/test_inputs.json", "r") as f:
     default_input = json.load(f)
 
 default_input = default_input["apple"]
 
-# Streamlit App
 st.title("Email Marketing Campaign Generator")
+
+with st.sidebar:
+    OPENAI_API_KEY = st.text_input("OpenAI API Key", value="", type="password")
+
+if not OPENAI_API_KEY:
+    st.warning("Please enter your OpenAI API Key in the sidebar.")
 
 col1, col2 = st.columns(2)
 
 with col1:
     st.write("## Inputs")
+    st.divider()
     st.header("Business Information")
     business_name = st.text_input("Business Name", value=default_input["business_information"]["business_name"])
     business_type = st.text_input("Business Type", value=default_input["business_information"]["business_type"])
@@ -62,8 +64,9 @@ with col1:
     solutions_presented = st.text_area("Solutions Presented", value=default_input["pain_points_and_solutions"]["solutions_presented"])
 
 
-email_inputs = {
-        "business_information": {
+inputs = {
+    "email_inputs": {
+         "business_information": {
             "business_name": business_name,
             "business_type": business_type,
             "campaign_goal": campaign_goal,
@@ -92,19 +95,25 @@ email_inputs = {
             "pain_points_addressed": pain_points_addressed,
             "solutions_presented": solutions_presented
         }
-    }
+    },
+    "api_key": OPENAI_API_KEY
+}
+
 
 with col2:
     st.write("## Output")
+    st.divider()
 
 if "output" not in st.session_state:
     st.session_state.output = None
 
+
+
 if st.button("Generate Emails"):
-    st.write(email_inputs)
     with col2:
         with st.spinner("Generating emails..."):
-            response = requests.post(model_url, json=email_inputs)
+            print("streamlit: ", OPENAI_API_KEY)
+            response = requests.post(model_url, json=inputs)
             if response.ok:
                 emails = response.json()
                 st.session_state.output = emails
@@ -114,20 +123,19 @@ if st.button("Generate Emails"):
 
 with col2:
     if st.session_state.output:
-        if st.button("Copy Emails"):
-                pyperclip.copy(st.session_state.output)
 
-        headers = ["Email 1: Introduction and Pain Point",
+        headers = ["Email 1: Introduction",
             "Email 2: Building on Pain Point",
             "Email 3: Solution Presentation",
             "Email 4: Benefits and Social Proof",
             "Email 5: Call to Action and Conclusion"
         ]
 
+        print(st.session_state.output)
+
         for index, (email_id, email_data) in enumerate(st.session_state.output.items()):
             st.subheader(headers[index])
-            st.write("**Subject:**")
-            st.write(email_data["subject"])
+            st.write("**Subject:**", email_data["subject"])
             st.write(email_data["greeting"])
             st.write(email_data["body"])
             st.write(email_data["signature"])

@@ -6,8 +6,8 @@ Below are the input parameters you need to consider:
 ---
 
 Generate the email sequence using the input parameters above and the output format given below. 
-Use placeholders wherever necessary.
-Each email should be more than 100 words long.
+Each email must be atleast 100 words long.
+Each email must slowly build on the previous email. 
 ---
 {output_format}
 ---

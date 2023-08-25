@@ -39,6 +39,10 @@ class EmailMarketingInputs(BaseModel):
     storyline_progression: StorylineProgression
     pain_points_and_solutions: PainPointsSolutions
 
+class Inputs(BaseModel):
+    email_inputs : EmailMarketingInputs
+    api_key : str
+
 
 # Assuming 'json_data' contains the received JSON object
 # formatted_string = format_json_to_multiline_string(test_input)
