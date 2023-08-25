@@ -112,7 +112,6 @@ if "output" not in st.session_state:
 if st.button("Generate Emails"):
     with col2:
         with st.spinner("Generating emails..."):
-            print("streamlit: ", OPENAI_API_KEY)
             response = requests.post(model_url, json=inputs)
             if response.ok:
                 emails = response.json()
