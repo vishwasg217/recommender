@@ -18,6 +18,8 @@ st.title("Email Marketing Campaign Generator")
 
 with st.sidebar:
     OPENAI_API_KEY = st.text_input("OpenAI API Key", value="", type="password")
+    st.write("[Get your OpenAI API Key](https://platform.openai.com/account/api-keys)")
+    st.write("[View Source Code](https://github.com/vishwasg217/recommender)]")
 
 if not OPENAI_API_KEY:
     st.warning("Please enter your OpenAI API Key in the sidebar.")

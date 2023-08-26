@@ -22,6 +22,7 @@
    - Features and Benefits: [String] Highlight the key features and benefits to communicate to the audience.
 
 5. **Tone and Voice:**
+   - Website URL : [String] Provide the URL of the user's website, to help the AI Assistant understand the brand's tone and voice.
    - Communication Tone: [String] Describe the desired tone for the emails (e.g., professional, friendly, informal).
    - Brand Voice: [String] Specify any specific voice characteristics (e.g., humorous, inspirational) for the email content.
 
