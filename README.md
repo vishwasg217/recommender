@@ -2,17 +2,6 @@
 
 Welcome to the **Email Marketing Content Assistant** project documentation. This tool empowers you to effortlessly create captivating email marketing campaigns tailored to your business needs. Craft engaging email sequences using AI-generated content, driven by the power of OpenAI's GPT-3.5-turbo language model.
 
-## Table of Contents
-
-- [Email Marketing Content Assistant](#email-marketing-content-assistant)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Inputs](#inputs)
-  - [Outputs](#outputs)
-  - [Getting Started](#getting-started)
-  - [Web App Usage](#web-app-usage)
-  - [Contact](#contact)
-
 ## Introduction
 
 The Email Marketing Content Assistant is a user-friendly web application that leverages OpenAI's advanced language model, GPT-3.5-turbo, to help you generate persuasive email sequences. Designed to streamline your marketing efforts, this tool enables you to create compelling email content aligned with your brand's voice and campaign objectives.
