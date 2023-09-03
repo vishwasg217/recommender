@@ -1,10 +1,10 @@
-# Email Marketing Content Assistant
+# Email Marketing Campaign Generator
 
-Welcome to the **Email Marketing Content Assistant** project documentation. This tool empowers you to effortlessly create captivating email marketing campaigns tailored to your business needs. Craft engaging email sequences using AI-generated content, driven by the power of OpenAI's GPT-3.5-turbo language model.
+This tool empowers you to effortlessly create captivating email marketing campaigns tailored to your business needs. Craft engaging email sequences using AI-generated content, driven by the power of OpenAI's GPT-3.5-turbo language model.
 
 ## Introduction
 
-The Email Marketing Content Assistant is a user-friendly web application that leverages OpenAI's advanced language model, GPT-3.5-turbo, to help you generate persuasive email sequences. Designed to streamline your marketing efforts, this tool enables you to create compelling email content aligned with your brand's voice and campaign objectives.
+The Email Marketing Campaign Generator is a user-friendly web application that leverages OpenAI's advanced language model, GPT-3.5-turbo, to help you generate persuasive email sequences. Designed to streamline your marketing efforts, this tool enables you to create compelling email content aligned with your brand's voice and campaign objectives.
 
 ## Inputs
 
@@ -40,7 +40,7 @@ Each email is designed to engage your audience and lead them through the marketi
 
 ## Getting Started
 
-To begin using the Email Marketing Content Assistant, simply visit the web app: [Email Marketing Content Assistant](https://recommender-kvsn.onrender.com/).
+To begin using the Email Marketing Content Assistant, simply visit the web app: [Email Marketing Campaign Generator](https://recommender-kvsn.onrender.com/).
 
 ## Web App Usage
 
@@ -59,4 +59,4 @@ If you have any questions, feedback, or need assistance, please don't hesitate t
 
 ---
 
-With the Email Marketing Content Assistant, you can effortlessly craft compelling email sequences that resonate with your audience and drive engagement. Enjoy the simplicity of AI-powered content creation, backed by OpenAI's state-of-the-art language model. Happy marketing!
+Now you can effortlessly craft compelling email sequences that resonate with your audience and drive engagement. Enjoy the simplicity of AI-powered content creation, backed by OpenAI's state-of-the-art language model. Happy marketing!
