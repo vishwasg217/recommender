@@ -49,13 +49,28 @@ To begin using the Email Marketing Content Assistant, simply visit the web app: 
 3. On the web app, enter your OpenAI API key.
 4. Input your business information, campaign goals, content preferences, and brand voice.
 5. Customize the email structure, product details (if applicable), and pain points.
-6. The AI-powered assistant will generate a series of five emails based on your inputs.
+6. The AI-powered assistant will generate a series of five emails based on your input.
 7. Review and fine-tune the generated content to match your vision.
 8. Download or copy the generated email sequence for use in your email marketing campaign.
 
+## To Run Locally
+
+1. Clone the Repository:
+   ```
+   git clone https://github.com/vishwasg217/recommender.git
+   ```
+2. Install Dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Run the App:
+   ```
+   python main.py
+   ```
+
 ## Contact
 
-If you have any questions, feedback, or need assistance, please don't hesitate to contact our support team at [vishwas.g217@gmail.com](mailto:vishwas.g217@gmail.com).
+If you have any questions, or feedback, or need assistance, please don't hesitate to contact our support team at [vishwas.g217@gmail.com](mailto:vishwas.g217@gmail.com).
 
 ---
 
